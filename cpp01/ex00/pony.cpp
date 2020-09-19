@@ -6,13 +6,52 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/28 20:59:40 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/07/29 20:46:02 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/09/19 19:29:19 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pony.hpp"
 
-int ponyOnTheHeap()
+pony::pony(void)
+{
+			speed = 0;
+			x_pos = 0;
+			y_pos = 0;
+			start_jump = 1;
+}
+
+int		pony::jump_pony(int h_fence)
+{
+	int jump;
+
+	jump = start_jump * speed;
+	if (jump > h_fence)
+		return (true);
+	return (false);
+}
+
+
+void	pony::pony_speed(std::string	gait)
+{
+	if (gait.compare("stand") == 0)
+		speed = 0;
+	else if (gait.compare("walk") == 0)
+		speed = 1;
+	else if (gait.compare("trot") == 0)
+		speed = 2;
+	else if (gait.compare("canter") == 0)
+		speed = 3;
+	else if (gait.compare("gallop") == 0)
+		speed = 4;
+	else
+	{
+		std::cout << "Input wasn't a valid gait, Please tell your pony which gait [stand, walk, trot, canter, gallop]" << std::endl;
+		std::cin >> gait;
+		pony_speed(gait);
+	}
+}
+
+int 	ponyOnTheHeap()
 {
 	pony*		pony_1 = new pony();
 	std::string	gait;
@@ -21,9 +60,9 @@ int ponyOnTheHeap()
 	std::cin >> gait;
 	pony_1->pony_speed(gait); 
 	delete pony_1;
+}
 
-
-int ponyOnTheStack()
+int 	ponyOnTheStack()
 {
 	pony pony_1;
 	std::string	gait;

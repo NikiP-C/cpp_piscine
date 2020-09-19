@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/29 18:23:45 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/08/20 19:39:22 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/09/19 19:34:58 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,8 @@ class	ZombieEvent
 	std::string	type;
 	
 	public:
-		void	setZombieType(std::string typeToSet)
-		{
-			type = typeToSet;
-		}
-		zombie*	newZombie(std::string	name)
-		{
-			zombie	*new_zombie;
-			new_zombie = new zombie(name, type);
-
-			return (new_zombie);
-		}
+		void	setZombieType(std::string typeToSet);
+		Zombie*	newZombie(std::string name);
 };
 
 std::string    pick_type();

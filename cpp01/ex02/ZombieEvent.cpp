@@ -6,11 +6,24 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/29 20:39:49 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/08/03 20:57:03 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/09/19 19:35:13 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
+
+void	ZombieEvent::setZombieType(std::string typeToSet)
+{
+	type = typeToSet;
+}
+
+Zombie*	ZombieEvent::newZombie(std::string name)
+{
+	Zombie	*new_zombie;
+	new_zombie = new Zombie(name, type);
+
+	return (new_zombie);
+}
 
 std::string pick_type()
 {
