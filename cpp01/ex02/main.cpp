@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/08/03 19:36:51 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/08/07 15:00:00 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/09/21 16:09:53 by niki          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(void)
 {
-    zombie *newZombie;
+    Zombie *newZombie;
     ZombieEvent ZombieEvent;
     std::string type;
 

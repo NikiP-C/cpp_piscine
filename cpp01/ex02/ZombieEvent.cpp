@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/29 20:39:49 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/09/19 19:35:13 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/09/21 16:11:04 by niki          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ZombieEvent::setZombieType(std::string typeToSet)
 {
-	type = typeToSet;
+	this->type = typeToSet;
 }
 
 Zombie*	ZombieEvent::newZombie(std::string name)
 {
 	Zombie	*new_zombie;
-	new_zombie = new Zombie(name, type);
+	new_zombie = new Zombie(name, this->type);
 
 	return (new_zombie);
 }
