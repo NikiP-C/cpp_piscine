@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   flagtrap.hpp                                       :+:    :+:            */
+/*   Victim.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/01 20:30:38 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/04 16:10:56 by nphilipp      ########   odam.nl         */
+/*   Created: 2020/10/04 20:04:45 by nphilipp      #+#    #+#                 */
+/*   Updated: 2020/10/04 20:37:41 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLAGTRAP_HPP
-# define FLAGTRAP_HPP
+#ifndef VICTIM_HPP
+#define VICTIM_HPP
 
-#include "ClapTrap.hpp"
+#include <iostream>
 
-class flagtrap : virtual public ClapTrap
+class Victim
 {
-private:
- 
+protected:
+    std::string Name;
 public:
-    flagtrap();
-    flagtrap(std::string NewName);
-    flagtrap(flagtrap & old);
-    ~flagtrap();
-    void        rangedAttack(std::string const & target);
-    void        meleeAttack(std::string const & target);
+    Victim();
+    Victim(std::string VName);
+    Victim(Victim &copy);
+    Victim &operator=(const Victim &nw);
+    ~Victim();
 
-    void    vaulthunter_dot_exe(std::string const & target);
+    std::string getName(void);
+    virtual void    getPolymorphed(void) const;
 };
+
+std::ostream &operator<<(std::ostream &o, Victim &ip);
 
 #endif

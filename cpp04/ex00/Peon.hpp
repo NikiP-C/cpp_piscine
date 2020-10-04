@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   flagtrap.hpp                                       :+:    :+:            */
+/*   Peon.hpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/01 20:30:38 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/04 16:10:56 by nphilipp      ########   odam.nl         */
+/*   Created: 2020/10/04 20:21:17 by nphilipp      #+#    #+#                 */
+/*   Updated: 2020/10/04 20:37:59 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLAGTRAP_HPP
-# define FLAGTRAP_HPP
+#ifndef PEON_HPP
+#define PEON_HPP
 
-#include "ClapTrap.hpp"
+#include "Victim.hpp"
 
-class flagtrap : virtual public ClapTrap
+class Peon : public Victim
 {
 private:
- 
 public:
-    flagtrap();
-    flagtrap(std::string NewName);
-    flagtrap(flagtrap & old);
-    ~flagtrap();
-    void        rangedAttack(std::string const & target);
-    void        meleeAttack(std::string const & target);
+    Peon();
+    Peon(std::string PName);
+    Peon(Peon &copy);
+    Peon &operator=(const Peon &nw);
+    ~Peon();
 
-    void    vaulthunter_dot_exe(std::string const & target);
+    void    getPolymorphed(void) const;
 };
 
 #endif

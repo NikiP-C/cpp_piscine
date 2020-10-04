@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/01 20:30:37 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/02 21:18:03 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/10/04 16:16:03 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,18 @@ void    flagtrap::vaulthunter_dot_exe(std::string const & target)
     {
         std::cout << "FR4G-TP " << Name << " has " << EnergyPoints << " which isn't enough for an attack" << std::endl;
     }
-    
 } 
+
+void    flagtrap::rangedAttack(std::string const & target)
+{
+    std::cout << "FL4G-TP " << Name << " attacks " << target << " at range, causing " \
+    << RangedDamage << " points of damage." << std::endl;
+    return ;
+}
+
+void    flagtrap::meleeAttack(std::string const & target)
+{
+    std::cout << "FL4G-TP " << Name << " attacks " << target << " with his mellee waepon, causing " \
+    << RangedDamage << " points of damage." << std::endl;
+    return ;
+}

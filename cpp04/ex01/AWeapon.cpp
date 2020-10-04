@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   flagtrap.hpp                                       :+:    :+:            */
+/*   AWeapon.cpp                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/01 20:30:38 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/04 16:10:56 by nphilipp      ########   odam.nl         */
+/*   Created: 2020/10/04 20:43:27 by nphilipp      #+#    #+#                 */
+/*   Updated: 2020/10/04 21:10:42 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLAGTRAP_HPP
-# define FLAGTRAP_HPP
+#include "AWeapon.hpp"
 
-#include "ClapTrap.hpp"
-
-class flagtrap : virtual public ClapTrap
+AWeapon::AWeapon(std::string const & name, int apcost, int damage) : Name(name), APCost(apcost), Damage(damage)
 {
-private:
- 
-public:
-    flagtrap();
-    flagtrap(std::string NewName);
-    flagtrap(flagtrap & old);
-    ~flagtrap();
-    void        rangedAttack(std::string const & target);
-    void        meleeAttack(std::string const & target);
+    
+}
 
-    void    vaulthunter_dot_exe(std::string const & target);
-};
+AWeapon::~AWeapon()
+{
+    
+}
 
-#endif
+std::string AWeapon::getName() const
+{
+    return (this->Name);
+}
+int         AWeapon::getAPCost() const
+{
+    return (this->APCost);
+}
+int         AWeapon::getDamage() const
+{
+    return (this->Damage);
+}

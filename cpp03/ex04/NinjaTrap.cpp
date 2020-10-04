@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/02 15:37:52 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/02 21:17:33 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/10/04 16:15:44 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,18 @@ void    NinjaTrap::ninjaShoebox(ScavTrap& st)
 void    NinjaTrap::ninjaShoebox(NinjaTrap& nt)
 {
     std::cout << "My dearest fellow Ninja " << nt.getName() << " , this will be a fight for the history books, or really webpages because who used books anymore" << std::endl;
+}
+
+void    NinjaTrap::rangedAttack(std::string const & target)
+{
+    std::cout << "NinjaTrap " << Name << " attacks " << target << " with shurken causing " \
+    << RangedDamage << " points of damage." << std::endl;
+    return ;
+}
+
+void    NinjaTrap::meleeAttack(std::string const & target)
+{
+    std::cout << "Ninjatrap" << Name << " attacks " << target << " with fighting poles, causing " \
+    << RangedDamage << " points of damage." << std::endl;
+    return ;
 }

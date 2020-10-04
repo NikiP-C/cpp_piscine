@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/02 14:14:14 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/02 21:14:42 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/10/04 16:06:28 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,6 @@ ClapTrap::ClapTrap(ClapTrap &old)
 ClapTrap::~ClapTrap()
 {
     std::cout << "Bye Bye - ClapTrap destructor was called" << std::endl;
-}
-
-void    ClapTrap::rangedAttack(std::string const & target)
-{
-    std::cout << Name << " attacks " << target << " at range, causing " \
-    << RangedDamage << " points of damage." << std::endl;
-    return ;
-}
-
-void    ClapTrap::meleeAttack(std::string const & target)
-{
-    std::cout << Name << " attacks " << target << " with his mellee waepon, causing " \
-    << RangedDamage << " points of damage." << std::endl;
-    return ;
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)

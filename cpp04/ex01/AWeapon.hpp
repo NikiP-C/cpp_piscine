@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   flagtrap.hpp                                       :+:    :+:            */
+/*   AWeapon.hpp                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/01 20:30:38 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/04 16:10:56 by nphilipp      ########   odam.nl         */
+/*   Created: 2020/10/04 20:43:26 by nphilipp      #+#    #+#                 */
+/*   Updated: 2020/10/04 21:07:19 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLAGTRAP_HPP
-# define FLAGTRAP_HPP
+#include <iostream>
 
-#include "ClapTrap.hpp"
-
-class flagtrap : virtual public ClapTrap
+class AWeapon
 {
 private:
- 
+    std::string Name;
+    int         APCost;
+    int         Damage;
 public:
-    flagtrap();
-    flagtrap(std::string NewName);
-    flagtrap(flagtrap & old);
-    ~flagtrap();
-    void        rangedAttack(std::string const & target);
-    void        meleeAttack(std::string const & target);
+    AWeapon();
+    AWeapon(std::string const & Name, int apcost, int damage);
+    AWeapon(AWeapon &copy);
+    ~AWeapon();
 
-    void    vaulthunter_dot_exe(std::string const & target);
+    AWeapon &operator=(const AWeapon &nw);
+    std::string getName() const;
+    int         getAPCost() const;
+    int         getDamage() const;
+    virtual void attack() const = 0;
 };
-
-#endif

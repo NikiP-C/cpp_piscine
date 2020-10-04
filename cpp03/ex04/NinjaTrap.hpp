@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/02 15:37:50 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/02 21:17:50 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/10/04 16:11:10 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ public:
     void    ninjaShoebox(flagtrap& ft);
     void    ninjaShoebox(ScavTrap& st);
     void    ninjaShoebox(NinjaTrap& nt);
+
+    void        rangedAttack(std::string const & target);
+    void        meleeAttack(std::string const & target);
 };
 
 #endif

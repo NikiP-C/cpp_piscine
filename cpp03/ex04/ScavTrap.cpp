@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/01 20:30:37 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/02 15:40:56 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/10/04 16:08:21 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,17 @@ void    ScavTrap::challengeNewcomer(std::string const & target)
         std::cout << "SCAV-TP " << Name << " has " << EnergyPoints << " which isn't enough for an attack" << std::endl;
     }
 } 
+
+void    ScavTrap::rangedAttack(std::string const & target)
+{
+    std::cout << Name << " attacks " << target << " when he came to close causing" \
+    << RangedDamage << " points of damage." << std::endl;
+    return ;
+}
+
+void    ScavTrap::meleeAttack(std::string const & target)
+{
+    std::cout << "SCAV-TP " << Name << " attacks " << target << "when he tried to open the door causing" \
+    << RangedDamage << " points of damage." << std::endl;
+    return ;
+}
