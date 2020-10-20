@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   RadScorpion.cpp                                    :+:    :+:            */
+/*   AssualtTerminator.hpp                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/13 17:26:56 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/10/13 17:30:17 by nphilipp      ########   odam.nl         */
+/*   Created: 2020/10/13 21:50:08 by nphilipp      #+#    #+#                 */
+/*   Updated: 2020/10/13 21:50:10 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RadScorpion.hpp"
+#ifndef ASSUALT_TERMINATOR_HPP
+# define ASSUALT_TERMINATOR_HPP
 
-RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
+class	AssualtTerminator
 {
-    std::cout << "* click click click *" << std::endl;   
-}
+public:
+	AssualtTerminator();
+	AssualtTerminator(const AssualtTerminator& ref);
+	AssualtTerminator& operator=(const AssualtTerminator& ref);
+	~AssualtTerminator();
+};
 
-RadScorpion::~RadScorpion()
-{
-    std::cout << "SPROTCH" << std::endl;
-}
+#endif
