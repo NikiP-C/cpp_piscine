@@ -6,13 +6,13 @@
 /*   By: niki <niki@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/27 23:43:18 by niki          #+#    #+#                 */
-/*   Updated: 2020/07/28 19:54:29 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/10/26 15:35:15 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "contact.hpp"
 
-int main(void)
+int 	main(void)
 {
 	int			conadd = 0;
 	int			i;
@@ -23,6 +23,8 @@ int main(void)
 
 	while (!exit)
 	{
+		std::cout << "Please enter ADD to add a contact, SEARCH to find an excisting contact, \
+or EXIT to exit the phonebook and lose all contacts." << std::endl;
 		std::getline(std::cin, input);
 		if (input.compare("ADD") == 0)
 		{
@@ -50,6 +52,8 @@ int main(void)
 		}
 		else if (input.compare("EXIT") == 0)
 			exit = 1;
+		else
+			std::cout << "please only enter ADD, SEARCH, or EXIT" << std::endl;
 	}
     return (0);
 }
