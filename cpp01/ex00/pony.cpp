@@ -6,7 +6,7 @@
 /*   By: nphilipp <nphilipp@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/28 20:59:40 by nphilipp      #+#    #+#                 */
-/*   Updated: 2020/09/19 19:29:19 by nphilipp      ########   odam.nl         */
+/*   Updated: 2020/11/02 16:57:29 by nphilipp      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 pony::pony(void)
 {
-			speed = 0;
-			x_pos = 0;
-			y_pos = 0;
-			start_jump = 1;
+	speed = 0;
+	x_pos = 0;
+	y_pos = 0;
+	start_jump = 1;
 }
 
 int		pony::jump_pony(int h_fence)
@@ -51,7 +51,7 @@ void	pony::pony_speed(std::string	gait)
 	}
 }
 
-int 	ponyOnTheHeap()
+void	ponyOnTheHeap()
 {
 	pony*		pony_1 = new pony();
 	std::string	gait;
@@ -62,7 +62,7 @@ int 	ponyOnTheHeap()
 	delete pony_1;
 }
 
-int 	ponyOnTheStack()
+void	ponyOnTheStack()
 {
 	pony pony_1;
 	std::string	gait;
