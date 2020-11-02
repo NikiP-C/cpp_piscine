@@ -22,9 +22,6 @@ class pony
 	float	start_jump;
 	public:
 		pony (void);
-		
-		
 		int		jump_pony(int h_fence);
-		
 		void	pony_speed(std::string	gait);
 };
